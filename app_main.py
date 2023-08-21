@@ -389,7 +389,27 @@ app.layout = html.Div(
                     'width':'100%',
                     "align-items": 'center'
                 }
-            )
+            ),
+        html.Div(
+            children=[
+                html.A("Github", href="https://github.com/predoeu/MakeTheFriendshipBracelets",
+                style={'color': 'white'},target='_blank'),
+                " | ",
+                html.A("Linkedin",
+                href="https://www.linkedin.com/posts/pedro-f-279603141_pra-manter-aqui-um-pouco-mais-atualizado-activity-7099344385900748801-KNCX?utm_source=share&utm_medium=member_desktop",
+                style={'color': 'white'},target='_blank'),
+                " | ",
+                html.A("Instagram", href="https://www.instagram.com/predoeu",style={'color': 'white'},target='_blank'),
+            ],
+            className="footer",
+            style={'display':'flex',
+                "justify-content": "center",
+                'width':'100%',
+                "align-items": 'center',
+                'margin-top':'10px'
+            }
+
+        )
         ],
             style={'display': 'none'}
     ),
