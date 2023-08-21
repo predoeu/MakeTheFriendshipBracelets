@@ -13,7 +13,7 @@ connection = mysql.connector.connect(**db_config)
 
 bases_individuais = pd.read_excel('base_atualizada_2.xlsx')
 
-def create_table(data, sugestao):
+def criar_tabela(data, sugestao):
     df = pd.DataFrame({'Sugestão {}'.format(sugestao): data})
     table = dbc.Table.from_dataframe(df, striped=True, bordered=False, borderless = True, hover=True,color = 'primary',size = 'sm')
     return table
@@ -874,7 +874,7 @@ def update_tabela_quarta_func(botao,*dropdown_values):
 
     tables = []
     for i in range(len(listas_nomes)):
-        tabela = create_table(listas_nomes[i], i+1)
+        tabela = criar_tabela(listas_nomes[i], i+1)
         tables.append(tabela)
 
 
